@@ -1,0 +1,26 @@
+.homepage-wrapper {
+    background: linear-gradient(135deg, rgba(30, 30, 40, 0.85), rgba(58, 58, 69, 0.85));
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.homepage-card {
+    background-color: rgba(44, 44, 52, 0.95);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.homepage-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.homepage-button {
+    margin: 10px;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.1rem
+}

@@ -1,0 +1,97 @@
+/* Apply a gradient background to the login wrapper */
+.login-wrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: rgba(44, 44, 52, 0.95);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow for modern look */
+    border-radius: 25px; /* Smooth rounded corners */
+    overflow: hidden;
+    padding: 3rem; /* Increase padding for spacious feel */
+    color: #ffffff; /* White text */
+    position: relative; /* For glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px; /* Adjust width for a wider card */
+    width: 100%; /* Full width up to max width */
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+
+/* Subtle scaling effect on hover */
+.login-card:hover {
+    transform: scale(1.03); /* Slight scale-up */
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Glow effect with further reduced opacity */
+.login-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 80%);
+    opacity: 0.05; /* Very subtle glow */
+    pointer-events: none;
+}
+
+/* Styling for "Sign in" title */
+.login-card .signin-title {
+    color: #ffffff; /* White "Sign in" text */
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+/* Customize the form inputs */
+.input-field {
+    border-radius: 30px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 5px rgba(118, 75, 162, 0.5);
+    outline: none;
+}
+
+/* Customize the login button */
+.custom-button {
+    background-color: #764ba2;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.custom-button:hover {
+    background-color: #5b3d9a;
+}
+
+/* Adjust card title */
+.card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,218 @@
+.landingPage {
+    background-color: #d5dbe2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    color: #020000;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 400 1.35rem K2D, sans-serif; /* Using rem for responsive font */
+}
+
+.logoContainer, .loginContainer {
+    display: flex;
+}
+
+.logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 1.5rem;
+}
+
+.brandName {
+    flex-basis: auto;
+    margin: auto 0;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+.loginIcon {
+    aspect-ratio: 0.96;
+    object-fit: contain;
+    width: 1.75rem; /* Responsive width */
+}
+
+.loginText {
+    align-self: start;
+}
+
+.navBarSeparator {
+    min-height: 0.015rem;
+    width: 100%;
+    border: 2px solid #000;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 939px;
+    width: 100%;
+}
+
+.backgroundImage {
+    position: absolute;
+    width: 100%; /* Cover full width */
+    height: auto; /* Keep aspect ratio */
+    left: 0;
+    
+}
+
+.contentWrapper {
+    position: relative;
+    margin-bottom: -23px;
+}
+
+.contentColumns {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5rem; /* Allow wrapping for smaller screens */
+}
+.heroContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    font-family: K2D, sans-serif;
+    font-weight: 400;
+    margin: auto 0;
+    padding-left: 5rem;
+    padding-top: 5rem; /* Similar padding to the .text-box */
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.heroContent:hover {
+    color: #6f6059; /* Add a hover color similar to .text-box */
+}
+
+.heroTitle {
+    padding-top: 2rem;
+    font-size: 5rem; /* Adjusted to match .text-box h1 */
+    font-weight: bold; /* Bold font similar to .text-box h1 */
+    margin-bottom: 1.2rem; /* Similar margin-bottom */
+    background: linear-gradient(270deg, #000000 0%, #754343 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative; /* Change from absolute to relative for better flow */
+    line-height: 1.2; /* Adjust the line-height for consistency */
+}
+
+.heroSubtitle {
+    font-size: 1.5rem; /* Match the .text-box p size */
+    line-height: 0.5; /* Similar line-height */
+    color: #000000;
+    position: relative; /* Change from absolute to relative */
+    margin-bottom: 1rem; /* Add margin for spacing */
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    padding-right: 5rem; /* Adjust to add space similar to .text-box */
+    width: 60%; /* Adjust the width to match .text-box */
+}
+
+.searchBox {
+    border-radius: 20px;
+    background-blend-mode: soft-light;
+    background-color: rgba(217, 217, 217, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 12.4%;
+    top: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 35%; /* Set a custom width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 40px;
+    
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+}
+
+.inputField {
+    background-blend-mode: soft_light;
+    background-color: #d9d9d9;
+    display: flex;
+    margin-top: 1rem; /* Responsive margin */
+    height: 62px;
+}
+
+.searchButton {
+    border-radius: 15px;
+    display: flex;
+    margin-top: 1rem; /* Responsive margin */
+    width: 100%; /* Full width */
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.searchButtonText {
+    border-radius: 20px;
+    background-blend-mode: linear_burn;
+    background-color: #413232;
+    color: #cab5b5;
+    font-size: 1.5rem;
+    padding: 1rem 2rem; /* Responsive padding */
+}
+
+/* Additional media queries for responsiveness */
+@media (max-width: 991px) {
+    .header, .mainContent, .contentWrapper {
+        max-width: 100%;
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .searchBox {
+        max-width: 90%; /* Adjust width */
+        margin: 1rem auto; /* Center with auto margin */
+    }
+
+    .rightColumn {
+        width: 100%; /* Full width on small screens */
+        margin-left: 0; /* Reset margin */
+    }
+}
+
+@media (max-width: 600px) {
+    .heroTitle {
+        font-size: 5vw; /* Adjust font size */
+    }
+
+    .heroSubtitle {
+        font-size: 4vw; /* Adjust font size */
+    }
+
+    .searchBox {
+        padding: 1rem; /* Adjust padding */
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
